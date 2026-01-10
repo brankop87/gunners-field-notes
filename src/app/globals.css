@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 11 11 11;          /* #0B0B0B */
+  --panel: 18 18 18;       /* #121212 */
+  --fg: 237 237 237;       /* #EDEDED */
+  --muted: 156 163 175;    /* #9CA3AF */
+  --accent: 239 1 7;       /* #EF0107 */
+}
+
+html, body { height: 100%; }
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
