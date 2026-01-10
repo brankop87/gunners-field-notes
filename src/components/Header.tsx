@@ -3,24 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function NavLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
-  const active = pathname === href || (href === "/blog" && pathname?.startsWith("/blog"));
+  const active = pathname === href || (href === "/blog" && pathname.startsWith("/blog"));
 
   return (
     <Link
       href={href}
       className={[
         "rounded-md px-2 py-1 text-sm transition",
-        active
-          ? "text-white bg-white/10"
-          : "text-white/70 hover:text-white hover:bg-white/5",
+        active ? "text-white bg-white/10" : "text-white/70 hover:text-white hover:bg-white/5",
       ].join(" ")}
     >
       {children}
